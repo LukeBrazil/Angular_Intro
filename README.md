@@ -1,27 +1,55 @@
-# MyApp
+# Introduction to Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+This project was authored by Luke Brazil.
 
-## Development server
+## What is does:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A simple app that uses the `Angular Http Method` to search for brewies and display the results.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Code Snippets:
 
-## Build
+1) Fetch Brewery Data
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service'
 
-## Running unit tests
+@Component({
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
+})
+export class ListComponent implements OnInit {
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  brews: Array<any> = [];
 
-## Running end-to-end tests
+  constructor(private fetch: HttpService) { 
+  }
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  ngOnInit(): void {
+    this.fetch.getBeer().subscribe(data => {
+      this.brews = data as Array<Object>;
+      console.log(this.brews)
+    })
+  }
 
-## Further help
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2) Display brewery data
+
+```
+<h1>Breweries</h1>
+
+<ul *ngIf='brews'>
+    <li *ngFor='let brew of brews'>
+        <p class='name'>{{ brew.name }}</p>
+        <p class='country'>{{ brew.country }}</p>
+        <a href='{{ brew.website_url }}' class='site' target='_blank'>Site</a>
+    </li>
+</ul>
+
+```
+
+
+
