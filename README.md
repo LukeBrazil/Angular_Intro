@@ -55,9 +55,8 @@ export class ListComponent implements OnInit {
 ## Screenshots:
 
 ```
-![brewery3](https://user-images.githubusercontent.com/57376030/107840352-9f88a380-6d77-11eb-8007-8a122cc45053.jpg)
-![brewery2](https://user-images.githubusercontent.com/57376030/107840358-a9120b80-6d77-11eb-8a40-626fb967c25d.jpg)
-![brewery1](https://user-images.githubusercontent.com/57376030/107840361-b0391980-6d77-11eb-9e25-c67a9eb615ec.jpg)
-
+[![brewery3.jpg](https://i.postimg.cc/zXT9C9zg/brewery3.jpg)](https://postimg.cc/1f5CP7Nm)
+[![brewery2.jpg](https://i.postimg.cc/3x7znnNb/brewery2.jpg)](https://postimg.cc/LnCyskzz)
+[![brewery1.jpg](https://i.postimg.cc/2SwMJhBj/brewery1.jpg)](https://postimg.cc/VJJK0SR2)
 ```
 
