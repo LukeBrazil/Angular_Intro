@@ -1,3 +1,16 @@
-<h1>Hello World</h1>
-
-<router-outlet></router-outlet>
+<header>
+  <div class="container">
+    <a href="#" class="logo">My App</a>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" routerLink="/">Home</a>
+          <a href="#" routerLink="/list">Breweries</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
