@@ -36,6 +36,7 @@ export class ListComponent implements OnInit {
 
 }
 
+```
 2) Display brewery data
 
 ```
