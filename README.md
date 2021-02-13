@@ -52,5 +52,11 @@ export class ListComponent implements OnInit {
 
 ```
 
+## Screenshots:
 
+```
+![Alt Text](/images/brewery3)
+![Alt Text](/images/brewery2)
+![Alt Text](/images/brewery1)
+```
 
